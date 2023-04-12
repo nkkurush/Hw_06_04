@@ -8,8 +8,10 @@ public class Main {
         Напишите метод, с помощью которого можно было бы возводить число, переданное в сигнатуру метода, в куб.
 */
         System.out.println("Task 1");
+        System.out.print("Введите число");
         int n = sc.nextInt();
-        System.out.println(toCub(n));
+
+        System.out.println("Число в кубе: " + toCub(n));
   /*      2
 
         Напишите метод, который бы возвращал в консоль:
@@ -18,6 +20,7 @@ public class Main {
         и false, если число меньше 5
 */
         System.out.println("Task 2");
+        System.out.print("Введите число");
         int n2 = sc.nextInt();
         System.out.println(check(n2));
       /*  3
@@ -25,6 +28,7 @@ public class Main {
         Необходимо написать метод, который бы возвращал из 2 чисел меньшее число. Например, из двух чисел 7 и 3 метод должен вывести в консоль 3.
 */
         System.out.println("Task 3");
+        System.out.print("Введите числа");
         int a = sc.nextInt();
         int b = sc.nextInt();
         System.out.println(Min(a,b));
@@ -33,6 +37,7 @@ public class Main {
         Необходимо написать метод, который бы возводил число в степень. И далее два числа, возведенные в степень, должны быть просуммированы, а результат выведен в консоль.
 */
         System.out.println("Task 4");
+        System.out.print("Введите числа");
         int f1 = sc.nextInt();
         int f2 = sc.nextInt();
         System.out.println(sum_kvad(toKvad(f1),toKvad(f2)));
@@ -48,6 +53,7 @@ public class Main {
                 Метод main() - должен считывать 2 числа (с помощью getInt()), считать операцию (с помощью getOperation(), передать все методу calc() и вывести на экран результат.*/
 
         System.out.println("Task 5 Calculator");
+        System.out.print("Введите числа и опреацию");
         int d = getInt(sc.nextInt());
         int d2 = getInt(sc.nextInt());
         char operation = getOperation(sc.next().charAt(0));
@@ -84,8 +90,8 @@ public class Main {
     public static char getOperation(char operation){
         return operation;
     }
-    public static int calc(int n1,int n2,char operation){
-        int res = 0;
+    public static double calc(int n1,int n2,char operation){
+        double res = 0;
         switch (operation){
             case  '+':
                 res= n1+n2;
@@ -94,7 +100,7 @@ public class Main {
                 res= n1-n2;
                 break;
             case '/':
-                res= n1/n2;
+                res= (double) n1/n2;
                 break;
             case '*':
                 res= n1*n2;
