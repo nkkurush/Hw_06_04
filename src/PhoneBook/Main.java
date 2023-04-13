@@ -19,7 +19,9 @@ public class Main {
         phoneBook.deleteContact("Vasiliy");
         //после удаления василия мы можем убедится что его нету в списке наших контактов
         for(Contacts con : phoneBook.contacts){
-            System.out.println(con);
+            if(con!=null) {
+                System.out.println(con);
+            }
         }
         System.out.println(phoneBook.editContact("Aleksandr","Pavel"));
     }
